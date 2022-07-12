@@ -1,2 +1,3 @@
-# dpse
-Differentiable Programming in Stochastic Environment
+# Differentiable Programming in Stochastic Environments
+
+Will be updated soon.
