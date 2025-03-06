@@ -1,0 +1,14 @@
+lxml
+networkx
+numpy
+pillow
+pycollada
+pyrender
+six
+trimesh
+sphinx
+sphinx_rtd_theme
+sphinx-automodapi
+matplotlib
+torch
+rospkg

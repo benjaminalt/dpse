@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<robot name="robotiq_85">
+    <link name="finger_left_link_0" />
+    <link name="finger_left_link_1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_proximal.STL" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_proximal.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger_left_link_2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_distal.STL" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0.1 0.1 0.6 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_distal.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger_left_link_3">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_elbow.STL" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_elbow.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="finger_left_joint_1" type="revolute">
+        <parent link="finger_left_link_0" />
+        <child link="finger_left_link_1" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <mimic joint="joint_0" multiplier="1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <joint name="finger_left_joint_2" type="revolute">
+        <parent link="finger_left_link_1" />
+        <child link="finger_left_link_2" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 0.001 0.059" />
+        <mimic joint="joint_0" multiplier="-1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <joint name="finger_left_joint_3" type="revolute">
+        <parent link="finger_left_link_0" />
+        <child link="finger_left_link_3" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 -0.017 -0.005" />
+        <mimic joint="joint_0" multiplier="1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <link name="finger_right_link_0" />
+    <link name="finger_right_link_1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_proximal.STL" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_proximal.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger_right_link_2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_distal.STL" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0.1 0.1 0.6 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_distal.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="finger_right_link_3">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_elbow.STL" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_elbow.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="finger_right_joint_1" type="revolute">
+        <parent link="finger_right_link_0" />
+        <child link="finger_right_link_1" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <mimic joint="joint_0" multiplier="1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <joint name="finger_right_joint_2" type="revolute">
+        <parent link="finger_right_link_1" />
+        <child link="finger_right_link_2" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 0.001 0.059" />
+        <mimic joint="joint_0" multiplier="-1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <joint name="finger_right_joint_3" type="revolute">
+        <parent link="finger_right_link_0" />
+        <child link="finger_right_link_3" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 -0.017 -0.005" />
+        <mimic joint="joint_0" multiplier="1" offset="0" />
+        <limit effort="100" lower="-6" upper="6" velocity="100" />
+    </joint>
+    <link name="palm">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.014 0 0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_base.STL" />
+            </geometry>
+            <material name="black">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.014 0 0" />
+            <geometry>
+                <mesh filename="meshes/robotiq/visual/robotiq85_base.STL" />
+            </geometry>
+            <material name="yellow">
+                <color rgba="0 1 1 1" />
+            </material>
+        </collision>
+    </link>
+    <link name="servo" />
+    <joint name="palm_finger_left_joint" type="fixed">
+        <parent link="palm" />
+        <child link="finger_left_link_0" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 -0.013 0.061" />
+        <limit effort="100" lower="0" upper="1.5708" velocity="100" />
+    </joint>
+    <joint name="palm_finger_right_joint" type="fixed">
+        <parent link="palm" />
+        <child link="finger_right_link_0" />
+        <axis xyz="1 0 0" />
+        <limit effort="100" lower="0" upper="1.5708" velocity="100" />
+        <origin rpy="0 0 3.1416" xyz="0 0.013 0.061" />
+    </joint>
+    <joint name="joint_0" type="revolute">
+        <parent link="palm" />
+        <child link="servo" />
+        <axis xyz="1 0 0" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <limit effort="100" lower="-0.11135" upper="0.72739" velocity="100" />
+    </joint>
+</robot>

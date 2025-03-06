@@ -1,0 +1,12 @@
+{
+  "learning_rate": 1e-4,
+  "meta_learning_rate": 0.001,
+  "adapt_steps": 5,
+  "epochs": 25,
+  "task_batch_size": 16,
+  "batch_size": 128,
+  "seq_len": 60,
+  "hidden_size": 128,
+  "num_layers": 3,
+  "dropout_p": 0.0
+}
